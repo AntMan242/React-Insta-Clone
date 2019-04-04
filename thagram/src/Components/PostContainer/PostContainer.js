@@ -1,22 +1,13 @@
 import React from 'react';
+import Post from '.Components/PostContainer/Post';
 
 
 const PostContainer = props => {
     return (
-        <div className='container'>
-            <img src={props.data.thumbnailUrl} alt='thumbnail' />
-            <h3>{props.data.username}</h3>
-        </div>
-
-        <div className='post-image'>
-            <img src={props.data.imageUrl} alt='User Post' />
-        </div>
-
-        <div>
-        <CommentSection />
-        </div>
-
-    )
-}
+      <div className="post-container-wrapper">
+        {props.post.map(p => <Post key={p.imageUrl} post={p} />)}
+      </div>
+    );
+  };
 
 export default PostContainer;

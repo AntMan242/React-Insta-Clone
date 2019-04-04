@@ -1,24 +1,29 @@
 import React from 'react';
-import IGLogo from '''
 
 
 
 const SearchBar = () => {
     return (
-        <div className='logos'>
-            <img src={logo} alt='IG Logo' width='700px' />
-            <img src={textLogo} alt='IG' />
+      <div className="search-bar-wrapper">
+        <div className="image-wrapper">
+          <img alt="instagram logo" src={IGLogo} className="logo-image" />
         </div>
         <div>
-            <input type='text'
-            placeholder='search' />
+          <input type="text" placeholder="Search" />
         </div>
-        <div className='icons'>
-            <img src={compass} alt='compass' />
-            <img src={heart} alt='heart' />
-            <img src={profile} alt='profile' />
+        <div className="social-wrapper">
+          <div className="social">
+            <i className="fa fa-compass" />
+          </div>
+          <div className="social">
+            <i className="fa fa-heart" />
+          </div>
+          <div className="social">
+            <i className="fa fa-user-circle" />
+          </div>
         </div>
-    )
-}
+      </div>
+    );
+  };
 
 export default SearchBar;
